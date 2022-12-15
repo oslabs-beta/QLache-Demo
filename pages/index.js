@@ -1,7 +1,12 @@
-// import React from 'react';
+import NavBar from "../components/navbar";
 
 function HomePage() {
-  return <div>QLache BABYYY</div>;
+  return (
+    <>
+      <NavBar />
+      <h1>QLache BABYYY</h1>
+    </>
+  );
 }
 
 export default HomePage;

@@ -1,0 +1,39 @@
+.nav {
+  background-color: azure;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  font-size: large;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px black;
+}
+
+.directory, .logoHome {
+  margin: 5px 10vw;
+}
+
+.logoHome img {
+  width: 150px;
+  position: relative;
+  top: 5px;
+}
+
+.directory {
+  display: flex;
+  justify-content: space-between;
+  min-width: 15vw;
+  max-width: min-content;
+  position: relative;
+  bottom: 5px;
+}
+
+.directory a {
+  margin: 0 5px;
+}
+
+.git {
+  width: 2vw;
+  min-width: 20px;
+  position: relative;
+  top: 5px;  
+}
