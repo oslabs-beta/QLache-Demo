@@ -6,6 +6,9 @@
   font-size: large;
   justify-content: space-between;
   box-shadow: 0px 0px 5px black;
+  position: fixed;
+  top:0;
+  height: 60px;
 }
 
 .directory, .logoHome {
@@ -35,5 +38,4 @@
   width: 2vw;
   min-width: 20px;
   position: relative;
-  top: 5px;  
 }
