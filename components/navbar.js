@@ -13,8 +13,10 @@ function NavBar() {
       <div className={styles.directory}>
         <a href="/demo">Demo</a>
         <a href="/team">Team</a>
-        <a href="https://github.com/oslabs-beta/QLache-Package" target="_blank">
-          <img className={styles.git} src="/github-logo.png" />
+        <a className={styles.git} href="https://github.com/oslabs-beta/QLache-Package" target="_blank">
+          <div className={styles.git}>
+            <img src="/github-logo.png" />
+          </div>
         </a>
       </div>
     </nav>

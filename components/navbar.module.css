@@ -19,6 +19,12 @@
   width: 150px;
   position: relative;
   top: 5px;
+}
+
+.logoHome img:hover {
+  position: relative;
+  bottom: 2px;
+  right: 2px;
   -webkit-filter: drop-shadow(2px 2px 1px rgb(182, 182, 182));
   filter: drop-shadow(2px 2px 1px rgb(182, 182, 182));
 }
@@ -37,14 +43,16 @@
 }
 
 .directory a:hover {
-  text-shadow: 0px 0px 15px lightgrey
+  text-shadow: 0px 0px 5px grey
+
 }
 
 .git {
   width: 20px;
+  height: 20px;
   border-radius: 10px;
 }
 
 .git:hover {
-  box-shadow: 0px 0px 15px lightgrey;
+  box-shadow: 0px 0px 5px gray;
 }

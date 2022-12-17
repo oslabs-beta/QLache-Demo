@@ -1,8 +1,13 @@
-.profile img {
+.profile img, .profile {
   width: 100px;
   border-radius: 50px;
-  box-sizing: border-box;
   box-shadow: 2px 2px 6px 2px black;
+  transition: all 200ms ease-in-out;
+}
+
+.profile img:hover, .profile:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 6px 2px black;
 }
 
 .container {
@@ -11,4 +16,8 @@
   align-items: center;
   min-width: fit-content;
   margin-top: 10%;
+}
+
+.info {
+  margin-top: 3vh;
 }

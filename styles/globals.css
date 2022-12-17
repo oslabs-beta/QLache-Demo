@@ -21,8 +21,13 @@ h1 {
 #memberContainer {
   display: flex;
   justify-content: space-around;
-  width: 100%;
+  align-items: center;
+  width: 95%;
   @apply text-xl font-medium;
+}
+
+#memberContainer * {
+  box-sizing: border-box;
 }
 
 #content {
