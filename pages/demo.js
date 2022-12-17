@@ -1,4 +1,5 @@
 import NavBar from '../components/navbar';
+import BarChart from '../components/barChart';
 
 function Demo() {
   return (
@@ -6,7 +7,7 @@ function Demo() {
       <NavBar />
       <div id="content">
         <h1>Look at how fast QLache is!</h1>
-        <strong>sick demo</strong>
+        <BarChart />
       </div>
     </>
   );

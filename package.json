@@ -20,8 +20,10 @@
   },
   "homepage": "https://github.com/oslabs-beta/QLache-Demo#readme",
   "dependencies": {
+    "chart.js": "^4.0.1",
     "next": "^13.0.6",
     "react": "^18.2.0",
+    "react-chartjs-2": "^5.0.1",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
