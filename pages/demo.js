@@ -1,21 +1,34 @@
 import NavBar from '../components/navbar';
 import BarChart from '../components/barChart';
+import FetchButton from '../components/fetchButton';
+import { useState } from 'react';
 
 function Demo() {
-  function click() {
-    console.log('spaghetti');
-    fetch('/demo-request')
-      .then((res) => res.json())
-      .then((data) => console.log(data));
-  }
+  const [data, setData] = useState([]);
 
+  function handleClick(value) {
+    const startTime = Date.now();
+    fetch('/demo-request')
+      .then((response) => {
+        const endTime = Date.now();
+        const newData = [...data];
+        newData.push(endTime - startTime);
+        setData(newData);
+      })
+      .catch(() => {
+        window.alert('error fetching');
+      });
+    console.log(value);
+  }
   return (
     <>
       <NavBar />
       <div id="content">
         <h1>Look at how fast QLache is!</h1>
-        <BarChart />
-        <button onClick={click}>click me</button>
+        <div id="demo">
+          <FetchButton handleClick={handleClick} />
+          <BarChart data={data} />
+        </div>
       </div>
     </>
   );

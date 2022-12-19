@@ -1,0 +1,37 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.query {
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  height: 200px;
+  width: 400px;
+}
+
+.query:focus {
+  background-color: rgba(255, 156, 172, 0.1);
+  outline: none;
+}
+
+.button {
+  padding: 10px;
+  border-radius: 20px;
+  height: 40px;
+  background-color: blanchedalmond;
+  margin-top: 2%;
+  box-shadow: 2px 2px 5px black;
+}
+
+.button:hover {
+  background-color: rgb(144, 118, 86);
+  color:whitesmoke;
+  box-shadow: none;
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
