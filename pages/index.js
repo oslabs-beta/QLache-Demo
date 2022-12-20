@@ -4,7 +4,7 @@ function HomePage() {
   return (
     <>
       <NavBar />
-      <div id="content">
+      <div className="content">
         <img src="/qlache-top-lightning.png" id="logo-main" />
         <h1 className="text-3xl font-bold">
           A lightweight, eviction & expiration-conscious GraphQL caching

@@ -33,7 +33,7 @@ function Team() {
   return (
     <>
       <NavBar />
-      <div id="content">
+      <div className="content">
         <h1>Meet the team!</h1>
         <div id="memberContainer">
           {memberInfo.map((member) => (
