@@ -16,9 +16,9 @@ const useInput = init => {
 function FetchButton({ handleClick }) {
   const [value, onChange, reset] = useInput('');
   return (
-    <div className={styles.container}>
+    <div id='text-and-button' className={styles.container}>
       <textarea onChange={onChange} value={value} className={styles.query} placeholder='Input query here...'></textarea>
-      <button className={styles.button} onClick={() => handleClick(value)}>Fetch Data</button>
+      <button id="fetch" className={styles.button} onClick={(e) => handleClick(value, e)}>Fetch Data</button>
     </div>
   );
 }
