@@ -30,11 +30,15 @@ function Demo() {
   return (
     <>
       <NavBar />
-      <div className='content demo'>
+      <div id="content-demo">
         <h1>Look at how fast QLache is!</h1>
         <div id="demo">
-          <div className='column'><FetchButton handleClick={handleClick} /></div>
-          <div className='column'><BarChart data={data} /></div>
+          <div className="column">
+            <FetchButton handleClick={handleClick} />
+          </div>
+          <div className="column">
+            <BarChart data={data} />
+          </div>
         </div>
       </div>
     </>
