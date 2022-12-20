@@ -12,11 +12,10 @@ app
 
     server.get('/demo-request', (req, res) => {
       console.log('got demo request');
-      fetch('https://swapi.dev/api/people/2/')
+      fetch('https://pokeapi.co/api/v2/pokemon/ditto')
         .then((response) => response.json())
         .then((data) => {
-          console.log(data.name);
-          res.status(202).json(data.name);
+          res.sendStatus(202);
         });
     });
 
