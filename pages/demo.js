@@ -7,6 +7,9 @@ function Demo() {
   const [data, setData] = useState([]);
 
   function handleClick(value) {
+    const thisButton = document.getElementById('fetch');
+    thisButton.style.pointerEvents = 'none';
+    const container = document.getElementById('text-and-button');
     const startTime = Date.now();
     fetch('/demo-request')
       .then((response) => {
@@ -14,20 +17,28 @@ function Demo() {
         const newData = [...data];
         newData.push(endTime - startTime);
         setData(newData);
+        thisButton.style.pointerEvents = 'auto';
+        container.style.cursor = 'revert';
       })
       .catch(() => {
         window.alert('error fetching');
+        thisButton.style.pointerEvents = 'auto';
+        container.style.cursor = 'revert';
       });
-    console.log(value);
+    container.style.cursor = 'wait';
   }
   return (
     <>
       <NavBar />
-      <div id="content">
+      <div id="content-demo">
         <h1>Look at how fast QLache is!</h1>
         <div id="demo">
-          <FetchButton handleClick={handleClick} />
-          <BarChart data={data} />
+          <div className="column">
+            <FetchButton handleClick={handleClick} />
+          </div>
+          <div className="column">
+            <BarChart data={data} />
+          </div>
         </div>
       </div>
     </>

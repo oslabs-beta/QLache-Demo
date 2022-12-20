@@ -70,7 +70,7 @@ h1 {
   height: 100%;
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  flex-direction: column;
   min-width: 100%;
   width: max-content;
 }
@@ -84,11 +84,12 @@ h1 {
 
 #demo {
   display: grid;
-  grid-template-columns: ;
-  flex-direction: row;
-  width: 100%;
+  grid-template-columns: 1fr 2fr;
+  grid-column-gap: 3%;
+  align-items: center;
+  width: 95%;
   height: 100%;
-  margin: 2% auto;
+  margin: 5% auto;
 }
 
 .code-bl {
