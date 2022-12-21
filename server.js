@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const QLache = require('./qlache-server/src/qlache.ts');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -9,14 +10,21 @@ app
   .prepare()
   .then(() => {
     const server = express();
+    const cache = new QLache(
+      'https://countries.trevorblades.com/graphql',
+      'LRU',
+      3
+    );
 
-    server.get('/demo-request', (req, res) => {
-      console.log('got demo request');
-      fetch('https://pokeapi.co/api/v2/pokemon/ditto')
-        .then((response) => response.json())
-        .then((data) => {
-          res.sendStatus(202);
-        });
+    server.post('/demo-request', cache.query, (req, res) => {
+      console.log('made it through the qlache middleware, woohoo!!');
+      res.sendStatus(203);
+
+      // fetch('https://pokeapi.co/api/v2/pokemon/ditto')
+      //   .then((response) => response.json())
+      //   .then((data) => {
+      //     res.sendStatus(202);
+      //   });
     });
 
     server.get('*', (req, res) => {
