@@ -15,7 +15,7 @@ function Demo() {
     fetch('/demo-request', {
       method: 'POST',
       headers: {
-        'Content-Type': 'Application/JSON'
+        'Content-Type': 'Application/JSON',
       },
       body: JSON.stringify({
         query: `{
