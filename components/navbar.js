@@ -11,6 +11,7 @@ function NavBar() {
         </a>
       </div>
       <div className={styles.directory}>
+        <a href="/">Home</a>
         <a href="/demo">Demo</a>
         <a href="/team">Team</a>
         <a className={styles.git} href="https://github.com/oslabs-beta/QLache-Package" target="_blank">

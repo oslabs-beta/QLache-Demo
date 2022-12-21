@@ -1,6 +1,7 @@
 import NavBar from '../components/navbar';
 import BarChart from '../components/barChart';
 import FetchButton from '../components/fetchButton';
+import EvictionSelect from '../components/evictionSelect';
 import { useState } from 'react';
 
 function Demo() {
@@ -32,6 +33,7 @@ function Demo() {
       <NavBar />
       <div id="content-demo">
         <h1>Look at how fast QLache is!</h1>
+        {/* <EvictionSelect /> */}
         <div id="demo">
           <div className="column">
             <FetchButton handleClick={handleClick} />

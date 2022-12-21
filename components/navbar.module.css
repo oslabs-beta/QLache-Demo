@@ -33,7 +33,7 @@
 .directory {
   display: flex;
   justify-content: space-between;
-  min-width: 15vw;
+  min-width: 20vw;
   max-width: min-content;
   position: relative;
   bottom: 5px;
@@ -49,9 +49,9 @@
 }
 
 .git {
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
 }
 
 .git:hover {
