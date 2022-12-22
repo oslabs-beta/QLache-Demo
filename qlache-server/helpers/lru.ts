@@ -1,4 +1,4 @@
-import { DoublyLinkedListVal } from "./doublyLL";
+import { DoublyLinkedListVal } from "./doublyLL.js";
 
 export class LRU {
   list: DoublyLinkedListVal;

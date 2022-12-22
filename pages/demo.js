@@ -13,6 +13,9 @@ function Demo() {
     const startTime = Date.now();
     fetch('/demo-request', {
       method: 'POST',
+      headers: {
+        'Content-Type': 'Application/JSON'
+      },
       body: JSON.stringify({
         query: `{
         country(code: "US") {

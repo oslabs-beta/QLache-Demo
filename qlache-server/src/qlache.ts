@@ -1,5 +1,5 @@
-import {LRU} from '../helpers/lru';
-import {LFU} from '../helpers/lfu';
+import {LRU} from '../helpers/lru.js';
+import {LFU} from '../helpers/lfu.js';
 // import {MRU} from '../helpers/mru';
 
 interface options {
@@ -20,6 +20,7 @@ class Qlache {
         this.apiURL = apiURL;
         this.evictionPolicy = this.setEvictionPolicy(type);
         this.capacity = capacity;
+        this.query = this.query.bind(this);
     }
 
     query(req, res, next) {
@@ -46,13 +47,20 @@ class Qlache {
                     query
                 }),
             })
-            .then((res) => res.json())
-            .then((res) => console.log('almost there, got a response from the api, no way we get to this point on try number 1', res));
-
+            .then((response) => response.json())
+            .then((data) => {
+                this.evictionPolicy.post(query, data);
+                // console.log(res);
+                const queryResponse: object = data;
+                res.locals.queryRes = queryResponse;
+                console.log('this is res.locals', res.locals.queryRes);
+                console.log('this should be the same as above', this.evictionPolicy.cache[query].value);
+                return next();
+                // console.log('almost there, got a response from the api, no way we get to this point on try number 1', res)
+            });
 
             //design error handling here - needs to integrate with user's existing error handling?
             // .catch(err => {
-            //     return next()
             // });
         }
         res.locals.queryRes = value;
@@ -60,6 +68,7 @@ class Qlache {
     }
 
     setEvictionPolicy(evictionPolicy: string){
+        console.log('about to enter switch statement');
         switch (evictionPolicy){
             case "LFU":
                 return new LFU(this.capacity);
@@ -71,7 +80,7 @@ class Qlache {
     }
 }
 
-module.exports = Qlache;
+export default Qlache;
 /* theoretical use case
 
 user will instantiate QLache, passing in desired options

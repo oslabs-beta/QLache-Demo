@@ -1,6 +1,6 @@
-const express = require('express');
-const next = require('next');
-const QLache = require('./qlache-server/src/qlache.ts');
+import express from 'express';
+import next from 'next';
+import QLache from './qlache-server/src/qlache.js';
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
@@ -15,6 +15,8 @@ app
       'LRU',
       3
     );
+
+    server.use(express.json());
 
     server.post('/demo-request', cache.query, (req, res) => {
       console.log('made it through the qlache middleware, woohoo!!');

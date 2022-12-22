@@ -1,4 +1,4 @@
-import { DoublyLinkedListVal, DoublyLinkedListFreq, ValNode } from "./doublyLL";
+import { DoublyLinkedListVal, DoublyLinkedListFreq, ValNode } from "./doublyLL.js";
 
 export class LFU {
   list: DoublyLinkedListFreq;
