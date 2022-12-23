@@ -1,11 +1,11 @@
-.profile img, .profile {
+.profile img{
   width: 100px;
   border-radius: 50px;
   box-shadow: 2px 2px 6px 2px black;
   transition: all 200ms ease-in-out;
 }
 
-.profile img:hover, .profile:hover {
+.profile img:hover{
   transform: scale(1.1);
   box-shadow: 4px 4px 6px 2px black;
 }
@@ -23,7 +23,7 @@
 }
 
 .linksContainer {
-  background-color: rgba(255, 166, 0, 0.7);
+  background-color: rgba(220, 18, 129, 0.7);
   width: 80px;
   height: 40px;
   border-radius: 20px;

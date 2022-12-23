@@ -12,7 +12,19 @@ function Demo() {
     thisButton.style.pointerEvents = 'none';
     const container = document.getElementById('text-and-button');
     const startTime = Date.now();
-    fetch('/demo-request')
+    fetch('/demo-request', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'Application/JSON'
+      },
+      body: JSON.stringify({
+        query: `{
+        country(code: "US") {
+          name
+        }
+      }`,
+      }),
+    })
       .then((response) => {
         const endTime = Date.now();
         const newData = [...data];

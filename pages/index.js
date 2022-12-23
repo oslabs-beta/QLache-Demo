@@ -5,17 +5,16 @@ function HomePage() {
     <>
       <NavBar />
       <div id="content">
-        <div>
-          <img src="/qlache-top-lightning.png" id="logo-main" />
+        <div id="logo-container">
+          <img src="/pink-logo.svg" id="logo-main" />
         </div>
-        <div>
+        <div id="summary">
           <h1 className="text-4xl font-bold">
-            A lightweight, eviction & expiration-conscious GraphQL caching
-            solution.
+            A lightweight, eviction-conscious GraphQL caching library.
           </h1>
           <ul className="text-xl font-medium text-gray-500">
-            <li>QLache allows you to...</li>
-            <li>So cool</li>
+            <li>Support for LRU, LFU + MFU eviction</li>
+            <li>Constant time complexity across all operations</li>
           </ul>
         </div>
       </div>

@@ -17,7 +17,6 @@
 }
 
 .query:focus {
-  background-color: rgba(255, 156, 172, 0.1);
   outline: none;
 }
 
@@ -25,13 +24,13 @@
   padding: 10px;
   border-radius: 20px;
   height: 40px;
-  background-color: blanchedalmond;
+  background-color: rgba(220, 18, 129, 0.2);
   margin-top: 2%;
   box-shadow: 2px 2px 5px black;
 }
 
 .button:hover {
-  background-color: rgb(144, 118, 86);
+  background-color: rgba(220, 18, 129, 0.5);
   color:whitesmoke;
   box-shadow: none;
   position: relative;

@@ -5,8 +5,9 @@ function NavBar() {
     <nav className={styles.nav}>
       <div className={styles.logoHome}>
         <a href="/">
-          <div>
-            <img src="/qlache-side-lightning.png" />
+          <div className={styles.navLeft}>
+            <img src="/pink-logo.svg" className={styles.navLogo} />
+            <h1>Lache</h1>
           </div>
         </a>
       </div>
@@ -14,9 +15,13 @@ function NavBar() {
         <a href="/">Home</a>
         <a href="/demo">Demo</a>
         <a href="/team">Team</a>
-        <a className={styles.git} href="https://github.com/oslabs-beta/QLache-Package" target="_blank">
+        <a
+          className={styles.git}
+          href="https://github.com/oslabs-beta/QLache-Package"
+          target="_blank"
+        >
           <div className={styles.git}>
-            <img src="/github-logo.png" />
+            <img src="/github-logo.png" className={styles.git} />
           </div>
         </a>
       </div>
