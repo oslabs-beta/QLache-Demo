@@ -26,10 +26,10 @@ function HomePage() {
               Start by installing our package as a dependency to your project.
             </h1>
           </div>
-          <pre class=" language-bash">
-            <code class="code-bl">
-              <span class="code-el">npm</span>{' '}
-              <span class="code-el">install</span> qlache
+          <pre className=" language-bash">
+            <code className="code-bl">
+              <span className="code-el">npm</span>{' '}
+              <span className="code-el">install</span> qlache
             </code>
           </pre>
         </div>
