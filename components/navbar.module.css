@@ -13,7 +13,7 @@
 }
 
 .directory, .logoHome {
-  margin: 5px 10vw;
+  margin: 0px 10vw;
 }
 
 .logoHome img {
@@ -57,12 +57,17 @@
   display: flex;
   justify-content: center;
   color: rgba(220, 18, 129);
-} 
+  max-height: 90%;
+}
+
+.navLeft h1 {
+  margin-top: 10%;
+}
 
 .navLeft:hover {
-  position: relative;
+  /* position: relative;
   bottom: 2px;
-  right: 2px;
-  -webkit-filter: drop-shadow(2px 2px 1px rgb(182, 182, 182));
-  filter: drop-shadow(2px 2px 1px rgb(182, 182, 182));
+  right: 2px; */
+  -webkit-filter: drop-shadow(0 0 2px rgb(182, 182, 182));
+  filter: drop-shadow(0 0 2px rgb(182, 182, 182));
 }
