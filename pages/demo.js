@@ -6,23 +6,20 @@ import { useState } from 'react';
 
 function Demo() {
   const [data, setData] = useState([]);
+  const [used, setUsed] = useState(false);
 
   function handleClick(value) {
     const thisButton = document.getElementById('fetch');
     thisButton.style.pointerEvents = 'none';
     const container = document.getElementById('text-and-button');
     const startTime = Date.now();
-    fetch('/demo-request', {
+    fetch('/api/demo-request', {
       method: 'POST',
       headers: {
         'Content-Type': 'Application/JSON',
       },
       body: JSON.stringify({
-        query: `{
-        country(code: "US") {
-          name
-        }
-      }`,
+        used,
       }),
     })
       .then((response) => {
@@ -30,6 +27,7 @@ function Demo() {
         const newData = [...data];
         newData.push(endTime - startTime);
         setData(newData);
+        setUsed(true);
         thisButton.style.pointerEvents = 'auto';
         container.style.cursor = 'revert';
       })
