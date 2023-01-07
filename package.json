@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "ts-node-esm server.ts",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
