@@ -1,0 +1,73 @@
+.nav {
+  background-color: white;
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+  font-size: large;
+  justify-content: space-between;
+  box-shadow: 0px 0px 5px black;
+  position: fixed;
+  top:0;
+  height: 60px;
+  z-index: 100;
+}
+
+.directory, .logoHome {
+  margin: 0px 10vw;
+}
+
+.logoHome img {
+  height: 45px;
+  position: relative;
+  top: 5px;
+}
+
+.directory {
+  display: flex;
+  justify-content: space-between;
+  min-width: 20vw;
+  max-width: min-content;
+  align-self: center;
+}
+
+.directory a {
+  margin: 0 5px;
+}
+
+.directory a:hover {
+  text-shadow: 0px 0px 5px grey
+
+}
+
+.git {
+  width: 26px;
+  height: 26px;
+  border-radius: 13px;
+}
+
+.git:hover {
+  box-shadow: 0px 0px 5px gray;
+}
+
+.navLogo {
+  height: 45px;
+}
+
+.navLeft {
+  display: flex;
+  justify-content: center;
+  color: rgba(220, 18, 129);
+  max-height: 90%;
+}
+
+.navLeft h1 {
+  margin-top: 10%;
+}
+
+.navLeft:hover {
+  /* position: relative;
+  bottom: 2px;
+  right: 2px; */
+  -webkit-filter: drop-shadow(0 0 2px rgb(182, 182, 182));
+  filter: drop-shadow(0 0 2px rgb(182, 182, 182));
+}
