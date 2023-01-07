@@ -19,8 +19,8 @@ app
     server.use(express.json());
 
     server.post('/demo-request', cache.query, (req, res) => {
-      console.log('made it through the qlache middleware, woohoo!!');
-      res.sendStatus(203);
+      console.log("res info", res.locals.queryRes);
+      res.status(203).json(res.locals.queryRes);
 
       // fetch('https://pokeapi.co/api/v2/pokemon/ditto')
       //   .then((response) => response.json())

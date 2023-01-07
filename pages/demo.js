@@ -3,9 +3,11 @@ import BarChart from '../components/barChart';
 import FetchButton from '../components/fetchButton';
 import EvictionSelect from '../components/evictionSelect';
 import { useState } from 'react';
+import Visualizer from '../components/visualizer';
 
 function Demo() {
   const [data, setData] = useState([]);
+  const [list, setList] = useState({});
 
   function handleClick(value) {
     const thisButton = document.getElementById('fetch');
@@ -32,6 +34,12 @@ function Demo() {
         setData(newData);
         thisButton.style.pointerEvents = 'auto';
         container.style.cursor = 'revert';
+        return response.json();
+      })
+      .then(fetchedData => {
+        setList(fetchedData);
+
+        console.log(fetchedData);
       })
       .catch(() => {
         window.alert('error fetching');
@@ -53,6 +61,12 @@ function Demo() {
           <div className="column">
             <BarChart data={data} />
           </div>
+        </div>
+        <div id="demo-2">
+          <div>
+            <Visualizer list={list} />
+          </div>
+
         </div>
       </div>
     </>

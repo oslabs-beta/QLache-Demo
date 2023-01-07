@@ -25,13 +25,11 @@ class Qlache {
     }
 
     query(req, res, next) {
-        console.log('in qlache query middleware')
         const query = req.body.query;
         // console.log('parsed query', parse(query));
         // check if cache contains the key 
         const value: object | undefined = this.evictionPolicy.get(query);
         if (value === undefined){
-            console.log('cache miss, making request to api');
             //fetch request to GQL - need to have access to schema
 
             // graphql({schema: this.schema, source: query})
@@ -55,8 +53,6 @@ class Qlache {
                 // console.log(res);
                 const queryResponse: object = data;
                 res.locals.queryRes = queryResponse;
-                console.log('this is res.locals', res.locals.queryRes);
-                console.log('this should be the same as above', this.evictionPolicy.cache[query].value);
                 return next();
                 // console.log('almost there, got a response from the api, no way we get to this point on try number 1', res)
             });
@@ -65,12 +61,13 @@ class Qlache {
             // .catch(err => {
             // });
         }
-        res.locals.queryRes = value;
-        return next();
+        else {
+            res.locals.queryRes = value;
+            return next();
+        }
     }
 
     setEvictionPolicy(evictionPolicy: string){
-        console.log('about to enter switch statement');
         switch (evictionPolicy){
             case "LFU":
                 return new LFU(this.capacity);
