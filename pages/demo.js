@@ -3,6 +3,7 @@ import BarChart from '../components/barChart';
 import FetchButton from '../components/fetchButton';
 import EvictionSelect from '../components/evictionSelect';
 import { useState } from 'react';
+import Head from 'next/head';
 
 function Demo() {
   const [data, setData] = useState([]);
@@ -40,6 +41,10 @@ function Demo() {
   }
   return (
     <>
+      <Head>
+        <title>QLache Demo</title>
+        <link rel="icon" href="/pink-logo.svg"></link>
+      </Head>
       <NavBar />
       <div id="content-demo">
         <h1>Look at how fast QLache is!</h1>
