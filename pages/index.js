@@ -1,8 +1,13 @@
 import NavBar from '../components/navbar';
+import Head from 'next/head';
 
 function HomePage() {
   return (
     <>
+      <Head>
+        <title>QLache: Caching for GraphQL</title>
+        <link rel="icon" href="/pink-logo.svg"></link>
+      </Head>
       <NavBar />
       <div id="content">
         <div id="logo-container">

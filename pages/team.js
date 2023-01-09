@@ -1,5 +1,6 @@
 import NavBar from '../components/navbar';
 import TeamMember from '../components/teamMember';
+import Head from 'next/head';
 
 const memberInfo = [
   {
@@ -37,6 +38,10 @@ const memberInfo = [
 function Team() {
   return (
     <>
+      <Head>
+        <title>Meet the QLache Team!</title>
+        <link rel="icon" href="/pink-logo.svg"></link>
+      </Head>
       <NavBar />
       <div id="team">
         <h1>Meet the team!</h1>
