@@ -8,11 +8,10 @@ function Demo() {
   const [data, setData] = useState([]);
   const [used, setUsed] = useState(false);
 
-  function handleClick(value) {
+  function handleClick() {
     const thisButton = document.getElementById('fetch');
     thisButton.style.pointerEvents = 'none';
     const container = document.getElementById('text-and-button');
-    // const startTime = Date.now();
     fetch('/api/demo-request', {
       method: 'POST',
       headers: {
@@ -46,7 +45,6 @@ function Demo() {
       <NavBar />
       <div id="content-demo">
         <h1>Look at how fast QLache is!</h1>
-        {/* <EvictionSelect /> */}
         <div id="demo">
           <div className="column">
             <FetchButton handleClick={handleClick} />

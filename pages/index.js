@@ -20,8 +20,8 @@ function HomePage() {
       </div>
       <div id="content-2">
         <div className="step">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-700">
+          <div className="instructions">
+            <h1 className="text-xl font-bold text-gray-700">
               Start by installing our package as a dependency to your project.
             </h1>
           </div>
@@ -33,8 +33,8 @@ function HomePage() {
           </pre>
         </div>
         <div className="step">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-700">
+          <div className="instructions">
+            <h1 className="text-xl font-bold text-gray-700">
               Require QLache into your project.
             </h1>
           </div>
@@ -46,15 +46,29 @@ function HomePage() {
           </pre>
         </div>
         <div className="step">
-          <div>
-            <h1 className="text-2xl font-bold text-gray-700">
+          <div className="instructions">
+            <h1 className="text-xl font-bold text-gray-700">
               Invoke QLache to create an instance of the cache.
             </h1>
           </div>
           <pre class=" language-bash">
             <code class="code-bl">
               <span class="code-el">const</span>{' '}
-              <span class="code-el">cache</span> = QLache.LRU();
+              <span class="code-el">cache</span> = QLache(exampleAPIURL.com/gql,
+              LRU, 100);
+            </code>
+          </pre>
+        </div>
+        <div className="step">
+          <div className="instructions">
+            <h1 className="text-xl font-bold text-gray-700">
+              Instead of directly querying the API, utilize the query method as
+              a middleware function in your server.
+            </h1>
+          </div>
+          <pre class=" language-bash">
+            <code class="code-bl">
+              <span class="code-el"></span>cache.query('yourGQLQueryString');
             </code>
           </pre>
         </div>
