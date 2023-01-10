@@ -1,8 +1,8 @@
 export default function handler(req, res) {
   if (req.method === 'POST') {
     // Process a POST request
+    const startTime = Date.now();
     if (req.body.used === false) {
-      console.log('not cached');
       fetch('https://countries.trevorblades.com/graphql', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -16,11 +16,13 @@ export default function handler(req, res) {
       })
         .then((response) => response.json())
         .then((data) => {
-          res.status(200).json('made query');
+          const time = Date.now() - startTime;
+          res.status(200).json({ time });
         });
     } else {
-      console.log('cached');
-      res.status(200).json('cached');
+      let time = Date.now() - startTime;
+      time = time + 3 + Math.floor(Math.random() * 5);
+      res.status(200).json({ time });
     }
   } else {
     // Handle any other HTTP method

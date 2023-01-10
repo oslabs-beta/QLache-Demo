@@ -9,11 +9,10 @@ function Demo() {
   const [data, setData] = useState([]);
   const [used, setUsed] = useState(false);
 
-  function handleClick(value) {
+  function handleClick() {
     const thisButton = document.getElementById('fetch');
     thisButton.style.pointerEvents = 'none';
     const container = document.getElementById('text-and-button');
-    const startTime = Date.now();
     fetch('/api/demo-request', {
       method: 'POST',
       headers: {
@@ -23,10 +22,13 @@ function Demo() {
         used,
       }),
     })
+      .then((resp) => resp.json())
       .then((response) => {
-        const endTime = Date.now();
+        console.log(response);
+        // const endTime = Date.now();
         const newData = [...data];
-        newData.push(endTime - startTime);
+        // newData.push(endTime - startTime);
+        newData.push(response.time);
         setData(newData);
         setUsed(true);
         thisButton.style.pointerEvents = 'auto';
@@ -48,7 +50,6 @@ function Demo() {
       <NavBar />
       <div id="content-demo">
         <h1>Look at how fast QLache is!</h1>
-        {/* <EvictionSelect /> */}
         <div id="demo">
           <div className="column">
             <FetchButton handleClick={handleClick} />

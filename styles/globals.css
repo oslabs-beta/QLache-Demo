@@ -114,11 +114,11 @@ h1 {
 .code-bl {
   background-color: #1e293b;
   border-radius: 0.5rem;
-  font-size: .8571429em;
-  line-height: 1.692;
+  font-size: 1.3em;
+  line-height: 1.8;
   margin-bottom: 1.6666667em;
   margin-top: 1.6666667em;
-  padding: 0.875rem 1rem;
+  padding: 1rem 2rem;
   color: #e2e8f0;
 }
 
@@ -127,4 +127,8 @@ h1 {
   width: 100%;
   justify-content: space-between;
   align-items: center;
+}
+
+.instructions {
+  max-width: 50%;
 }
