@@ -30,10 +30,10 @@ function HomePage() {
               Start by installing our package as a dependency to your project.
             </h1>
           </div>
-          <pre class=" language-bash">
-            <code class="code-bl">
-              <span class="code-el">npm</span>{' '}
-              <span class="code-el">install</span> qlache
+          <pre className=" language-bash">
+            <code className="code-bl">
+              <span className="code-el">npm</span>{' '}
+              <span className="code-el">install</span> qlache
             </code>
           </pre>
         </div>
@@ -43,10 +43,10 @@ function HomePage() {
               Require QLache into your project.
             </h1>
           </div>
-          <pre class=" language-bash">
-            <code class="code-bl">
-              <span class="code-el">const</span>{' '}
-              <span class="code-el">QLache</span> = require('qlache');
+          <pre className=" language-bash">
+            <code className="code-bl">
+              <span className="code-el">const</span>{' '}
+              <span className="code-el">QLache</span> = require('qlache');
             </code>
           </pre>
         </div>
@@ -56,11 +56,11 @@ function HomePage() {
               Invoke QLache to create an instance of the cache.
             </h1>
           </div>
-          <pre class=" language-bash">
-            <code class="code-bl">
-              <span class="code-el">const</span>{' '}
-              <span class="code-el">cache</span> = QLache(exampleAPIURL.com/gql,
-              LRU, 100);
+          <pre className=" language-bash">
+            <code className="code-bl">
+              <span className="code-el">const</span>{' '}
+              <span className="code-el">cache</span> = new QLache('exampleAPI.com/gql',
+              'LRU', 100);
             </code>
           </pre>
         </div>
@@ -71,9 +71,9 @@ function HomePage() {
               a middleware function in your server.
             </h1>
           </div>
-          <pre class=" language-bash">
-            <code class="code-bl">
-              <span class="code-el"></span>cache.query('yourGQLQueryString');
+          <pre className=" language-bash">
+            <code className="code-bl">
+              <span className="code-el"></span>cache.query('yourGQLQueryString');
             </code>
           </pre>
         </div>

@@ -25,13 +25,14 @@
 .directory {
   display: flex;
   justify-content: space-between;
-  min-width: 20vw;
-  max-width: min-content;
+  width: 30vw;
+  min-width: min-content;
   align-self: center;
 }
 
 .directory a {
   margin: 0 5px;
+  color: black;
 }
 
 .directory a:hover {
