@@ -13,6 +13,7 @@ function NavBar() {
       </div>
       <div className={styles.directory}>
         <a href="/">Home</a>
+        <a href="/docs">Docs</a>
         <a href="/demo">Demo</a>
         <a href="/team">Team</a>
         <a
