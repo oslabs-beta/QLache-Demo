@@ -42,13 +42,16 @@ function Docs() {
           </pre>
           <h3>Constructor Parameters</h3>
           <p><span className='parameter'>apiURL</span><br/>
+          A string containing the path to the GraphQL API you want to request from.
           </p>
           <p><span className='parameter'>evictionMethod</span><br/>
+          A string to decide the eviction method of the instantiated cache. Must strictly be one of "LFU", "LRU", or "MRU", corresponding to least frequently used, least recently used, and most recently used, respectively.
           </p>
           <p><span className='parameter'>cacheSize</span><br/>
+          The number of entries available in your cache before data is evicted from memory.
           </p>
           <h2>Implementation</h2>
-          <p>After initializing your cache, adding the QLache.query method as a middleware function to your route will enable server-side caching.</p>
+          <p>After initializing your cache, adding its query method as a middleware function to your route will enable server-side caching.</p>
           <pre className="code-bl language-bash">
             <code>
             app.get('/', cache.query, function(req, res) &#123; <br />
@@ -57,6 +60,7 @@ function Docs() {
             </code>
           </pre>
           <p>Note that in the final function, the the query result is sent back in the response to the client as "res.locals.queryRes". By default, the query method stores the result of your GraphQL query, whether cached or not, to the res.locals object under the key "queryRes".</p>
+          <p>That's all it takes to set up server-side caching with QLache!</p>
         </div>
       </div>
     </>
