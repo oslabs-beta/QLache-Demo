@@ -24,9 +24,7 @@ function Demo() {
       .then((resp) => resp.json())
       .then((response) => {
         console.log(response);
-        // const endTime = Date.now();
         const newData = [...data];
-        // newData.push(endTime - startTime);
         newData.push(response.time);
         setData(newData);
         setUsed(true);
@@ -44,9 +42,17 @@ function Demo() {
     <>
       <NavBar />
       <div id="content-demo">
-        <h1>Look at how fast QLache is!</h1>
+        <h1>QLache Caching Demo</h1>
         <div id="demo">
           <div className="column">
+            <h2>
+              Click the button below to simulate sending a request to a GraphQL
+              API using the QLache package.
+            </h2>
+            <h2>
+              See how further requests have significantly quicker response times
+              due to query caching.
+            </h2>
             <FetchButton handleClick={handleClick} />
           </div>
           <div className="column">

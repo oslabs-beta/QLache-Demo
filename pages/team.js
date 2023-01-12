@@ -16,7 +16,7 @@ const memberInfo = [
   },
   {
     name: 'Cameron Kelly',
-    photo: '/ck.jpeg',
+    photo: '/ck.jpg',
     linkedin: 'https://www.linkedin.com/in/cameron-kelly-2329a74a/',
     github: 'https://github.com/Cam-Kelly',
   },
@@ -28,7 +28,7 @@ const memberInfo = [
   },
   {
     name: 'Tyler Heathcote',
-    photo: '/th.jpeg',
+    photo: '/th.jpg',
     linkedin: 'https://www.linkedin.com/in/tylerheathcote/',
     github: 'https://github.com/tylerheathcote',
   },
