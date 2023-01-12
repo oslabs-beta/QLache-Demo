@@ -37,6 +37,7 @@
 .linksContainer div, .linksContainer a, .linksContainer svg {
   height: 30px;
   width: 30px;
+  color: black;
   background-color: white;
   border-radius: 15px;
   transition: all 200ms ease-in-out;

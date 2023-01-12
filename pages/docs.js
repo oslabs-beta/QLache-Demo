@@ -6,8 +6,13 @@ function Docs() {
   return (
     <>
       <Head>
-        <title>Meet the QLache Team!</title>
+        <title>QLache Documentation</title>
         <link rel="icon" href="/pink-logo.svg"></link>
+        <meta property='og:title' content='QLache Documentation'/>
+        <meta property='og:image' content='https://www.qlache.dev/pink-logo.svg'/>
+        <meta property='og:url' content='www.qlache.dev/docs'/>
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='627' />
       </Head>
       <NavBar />
       <div id="content-docs">
@@ -54,7 +59,7 @@ function Docs() {
           <p>After initializing your cache, adding its query method as a middleware function to your route will enable server-side caching.</p>
           <pre className="code-bl language-bash">
             <code>
-            app.get('/', cache.query, function(req, res) &#123; <br />
+            app.post('/gqlapi', cache.query, function(req, res) &#123; <br />
             {'  '}res.send(res.locals.queryRes);<br />
             &#125;)
             </code>

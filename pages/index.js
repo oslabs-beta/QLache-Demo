@@ -7,6 +7,11 @@ function HomePage() {
       <Head>
         <title>QLache: Caching for GraphQL</title>
         <link rel="icon" href="/pink-logo.svg"></link>
+        <meta property='og:title' content='QLache: Caching for GraphQL'/>
+        <meta property='og:image' content='https://www.qlache.dev/pink-logo.svg'/>
+        <meta property='og:url' content='www.qlache.dev'/>
+        <meta property='og:image:width' content='1200' />
+        <meta property='og:image:height' content='627' />
       </Head>
       <NavBar />
       <div id="content">
@@ -59,7 +64,7 @@ function HomePage() {
           <pre className=" language-bash">
             <code className="code-bl">
               <span className="code-el">const</span>{' '}
-              <span className="code-el">cache</span> = new QLache('exampleAPI.com/gql',
+              <span className="code-el">cache</span> = new QLache('example.api/gql',
               'LRU', 100);
             </code>
           </pre>
@@ -73,7 +78,7 @@ function HomePage() {
           </div>
           <pre className=" language-bash">
             <code className="code-bl">
-              <span className="code-el"></span>cache.query('yourGQLQueryString');
+              <span className="code-el"></span>cache.query
             </code>
           </pre>
         </div>

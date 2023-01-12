@@ -50,6 +50,7 @@ function Team() {
             <TeamMember {...member} />
           ))}
         </div>
+        <p>Special thanks to <a href='https://www.linkedin.com/in/willem-rosenthal/'>Willem Rosenthal</a> and <a href='https://github.com/open-source-labs'>OSLabs</a></p>
       </div>
     </>
   );
